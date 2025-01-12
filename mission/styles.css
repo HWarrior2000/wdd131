@@ -1,0 +1,55 @@
+body, h1{
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.5;
+}
+
+h1{
+    letter-spacing: 2px;
+    font-size: 50px;
+    font-weight: 400;
+    margin-bottom: 0px;
+}
+
+p, li, i{font-size: 20px;}  
+
+li{
+    margin-bottom: 15px;
+}
+
+.subtitle{
+    color: #006EB6;
+    letter-spacing: 3px;
+    border-bottom-style: solid;
+    border-width: 1px;
+    border-color: lightgray;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.title{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.everything{
+    max-width: 600px;
+    margin: auto;   
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightgrey;
+    padding-top: 40px;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+.logo{
+    display: block;
+    width: 150px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;
+    margin-bottom: 70px;
+} 
