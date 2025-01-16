@@ -42,10 +42,7 @@ li{
     display: block;
     width: 150px;
     height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 70px;
-    margin-bottom: 70px;
+    margin: 70px auto 10px auto;
 } 
 
 .dark{
