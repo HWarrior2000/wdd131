@@ -1,16 +1,29 @@
 // events.js
 let tasks = [];
 
+function taskTemplate(task) {
+    return `<li ${task.done ? 'class="strike"' : ""}>
+   <p>${task.detail}</p>
+   <div>
+     <span data-function="delete">❎</span>
+     <span data-function="complete">✅</span>
+   </div>
+ </li>`;
+}
+
 function renderTasks(tasks) {
   // get the list element from the DOM
+  const listElement = document.querySelector("#todoList");
   // loop through the tasks array. transform (map) each task object into the appropriate HTML to represent a to-do.
+  const taskHtml = tasks.map(taskTemplate);
+  listElement.innerHTML = taskHtml.join("");
 }
 
 function newTask() {
   // get the value entered into the #todo input
   const todoInput = document.querySelector("#todo");
   // add it to our arrays tasks
-  tasks.push({ task: todoInput.value, done: false});
+  tasks.push({ detail: todoInput.value, done: false});
   // render out the list
   renderTasks(tasks);
   // clear out input

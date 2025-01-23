@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=family=Mooli&display=swap");
+:root {
+--primary-color: #52489c;
+--secondary-color: #59c3c3;
+--accent-color: #f45b69;
+--text-dark: #333;
+--text-light: #ebebeb;
+--primary-font: Arial, Helvetica,sans-serif;
+--secondary-font: Mooli, san-serif;
+}
+
+body {
+    font-family: var(--primary-font);
+    color: var(--text-light);
+    background-color: var(--primary-color);
+    margin: 0;
+  }
+
+  h1, h3, h5 {
+    font-family: var(--secondary-font);
+    font-weight: 100;
+  }
+
+  h1 {
+    font-size: 4rem;
+    text-align: center;
+    margin: 10px auto;
+    padding-top: 20px;
+  }
+
+  h3 {
+    color: var(--text-dark);
+    text-align: center;
+    padding: 20px;    
+    margin: 0;
+    font-size: 30px;
+  }
+
+  a {
+    color: var(--text-light);
+  }
+
+  #menuButton {
+    all: unset;
+    margin: 10px auto 8px auto;
+    display: block;
+    font-size: 2rem;
+  }
+
+  main {
+    background-color: lightgray;
+    padding-bottom: 30px;
+  }
+
+  header, footer {
+    padding: 20px;
+  }
+
+  #navigation {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    margin: 0 auto;
+    padding: 0;
+    width: 100px;
+  }
+
+  a {
+    margin: 0 auto;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-rows: auto;
+    grid-gap: 30px;
+  }
+
+  figure {
+    margin: 0;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-style: solid;
+    border-width: 7px;
+    box-shadow: 5px 5px 5px #333;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .viewer {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: grid;
+  }
+
+  .close-viewer {
+    all: unset;
+    text-align: right;
+    padding: 30px;
+    color: white;
+  }
+
+  div .viewer-img {
+    all: unset;
+    max-height: 100%;
+    margin: 0 auto;
+  }
+
+  @media screen and (min-width: 700px) {
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+  }
+
+  @media screen and (min-width: 1000px) {
+    #menuButton {
+        display: none;
+    }
+
+    #navigation {
+        grid-template-columns: repeat(5, 1fr);
+        width: 500px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: max-content;
+    }
+
+    .viewer {
+        position: fixed;
+        margin:auto;
+        max-height: 400px;
+        max-width: 800px;
+        background-color: rgba(0, 0, 0, 0.75);
+        display: grid;
+      }
+
+      div .viewer-img {
+        padding: 8px;
+      }
+  }
