@@ -44,7 +44,7 @@ function viewHandler(event) {
     console.log(newImage);
 	// insert the viewerTemplate into the top of the body element
 	// (element.insertAdjacentHTML("afterbegin", htmltoinsert))
-    document.querySelector("body").insertAdjacentHTML("afterbegin", viewerTemplate(newImage, "hello"));
+    document.querySelector("body").insertAdjacentHTML("afterbegin", viewerTemplate(newImage, "please work"));
 
 	// add a listener to the close button (X) that calls a function called closeViewer when clicked
     document.querySelector(".close-viewer").addEventListener("click", closeViewer);
