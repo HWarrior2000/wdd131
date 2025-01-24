@@ -40,17 +40,22 @@ function viewHandler(event) {
     const source = image.src.split("-");
     console.log(source);
 	// construct the new image file name by adding "-full.jpeg" to the first part of the array from the previous step
-    const newImage = source[0] + "-full.jpg";
+    const newImage = source[0] + "-full.jpeg";
     console.log(newImage);
 	// insert the viewerTemplate into the top of the body element
 	// (element.insertAdjacentHTML("afterbegin", htmltoinsert))
     document.querySelector("body").insertAdjacentHTML("afterbegin", viewerTemplate(newImage, "hello"));
 
 	// add a listener to the close button (X) that calls a function called closeViewer when clicked
+    document.querySelector(".close-viewer").addEventListener("click", closeViewer);
+}
 
+function closeViewer() {
+    document.querySelector(".viewer").remove();
+    console.log("it did something");
 }
 
 handleResize();
 document.querySelector("#menuButton").addEventListener("click", toggleMenu);
 window.addEventListener("resize", handleResize);
-document.addEventListener("click", viewHandler);
+document.querySelector(".gallery").addEventListener("click", viewHandler);
