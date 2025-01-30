@@ -60,7 +60,7 @@ main {
 .info-table {
     list-style-type: none;
     justify-items: end;
-    line-height: 2rem;
+    line-height: 1.6rem;
     padding: 0 1rem 0 0;
     border-right-style: solid;
     border-color: var(--gold-color);
@@ -81,4 +81,17 @@ main {
     border-color: var(--gold-color);
     border-width: 2px;
     margin: 1em;
+}
+
+.skiptocontent a{
+    position: absolute;
+    top: -40px;
+}
+
+.skiptocontent a:focus {
+    top: 0;
+}
+
+.date {
+    font-size: 1.3rem;
 }
