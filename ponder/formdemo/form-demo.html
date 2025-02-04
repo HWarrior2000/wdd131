@@ -1,0 +1,67 @@
+<!-- form-demo.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout Form</title>
+    <link rel="stylesheet" href="form-demo.css" />
+    <script src="form-demo.js" defer></script>
+  </head>
+  <body>
+    <header><h1>Checkout</h1></header>
+    <main>
+      <section class="errors"></section>
+      <form id="checkoutForm" action="completed.html" method="get">
+        <fieldset>
+          <legend>Info</legend>
+          <p>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+          </p>
+          <p>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="Enter your email" required>
+          </p>
+          <p>
+            <label for="address">Address:</label>
+            <input type="text" name="address" id="address" required>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Payment</legend>
+          <p>
+            <label for="paymentType">Payment Method:</label>
+            <select name="paymentType" id="paymentType">
+              <option value="">Choose One</option>
+              <option value="credit">Credit Card</option>
+              <option value="paypal">PayPal</option>
+            </select>
+          </p>
+          <p id="creditCardContainer" class="hide">
+            <label for="cardNumber">Card Number:</label>
+            <input type="text" id="cardNumber" name="cardNumber" pattern="[0-9]{16}" required>
+          </p>
+          <p id="paypalContainer" class="hide">
+            <label for="paypal">Paypal Username:</label>
+            <input type="text" id="paypal" name="paypal" required>
+          </p>
+        </fieldset>
+
+        <!-- <fieldset>
+          <legend>Interests</legend>
+          <p>
+            <label for="games">Games</label>
+            <input type="checkbox" name="interests" id="games">
+          </p>
+          <p>
+            <label for="comics">Comics</label>
+            <input type="checkbox" name="interests" id="comics">
+          </p>
+        </fieldset> -->
+        <button type="submit">Submit</button>
+      </form>
+    </main>
+  </body>
+</html>
