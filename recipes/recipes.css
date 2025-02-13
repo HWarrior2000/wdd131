@@ -1,0 +1,73 @@
+:root {
+    --primary-color: #52489c;
+    --secondary-color: #59c3c3;
+    --accent-color: #f45b69;
+    --text-dark: #333;
+    --text-light: #ebebeb;
+    --primary-font: Arial, Helvetica, sans-serif;
+    --headline-font: "Amatic SC", serif;
+    }
+body {
+    font-family: var(--primary-font);
+}
+
+img {
+    max-width: 100%;
+
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: var(--headline-font);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+header > img {
+    height: 80px;
+}
+
+#title {
+    font-size: 3em;
+}
+
+.social {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+.social > .link-img {
+    display: flex;
+    gap: .5em;
+    grid-row: 1/2;
+}
+
+.social > .link-img > a {
+    width: 40px;
+}
+
+#search-bar {
+    display: flex;
+    justify-content: center;
+}
+
+#search-bar > input {
+    height: 50px;
+    width: 40%;
+    padding: 0;
+}
+
+#search-bar > #submit{
+    width: 54px;
+    height: 54px;
+}
+
+.recipe {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 1em;
+    gap: 1em;
+}
