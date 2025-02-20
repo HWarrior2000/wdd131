@@ -1,0 +1,138 @@
+body {
+    margin: 0;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 100px 1fr 1fr;
+    align-items: center;
+    background-color: #f7f5ff;
+}
+
+header > #navBlock {
+    justify-self: flex-start;
+    display: flex;
+    gap: 1em;
+    list-style-type: none;
+    padding: 0 0 0 2em ;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+header > #socialBlock {
+    justify-self: flex-end;
+    display: flex;
+    /* flex-wrap: wrap; */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.logo {
+    width: 100px;
+}
+
+#book-now {
+    display: grid;
+    width: 70%;
+    max-height: 500px;
+    margin: 0 auto;
+    justify-content: center;
+    grid-template-rows: 5fr 1fr 1fr;
+}
+
+#book-now > img {
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+    grid-row: 1 / 4;
+    grid-column: 1 / 2; 
+}
+#book-now > p {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    text-align: center;
+    align-self: end;
+}
+#book-now > a {
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+    width: 80px;
+    height: 40px;
+    margin: 0 auto;
+    align-content: center;
+    text-align: center;
+    margin-top: -10px;
+}
+
+#reviews {
+    display: flex;
+    max-width: 90%;
+    margin: 0 auto;
+    gap: 1em;
+}
+
+.review {
+    width: 100%;
+}
+.review p {
+    text-align: center;
+}
+
+#popular-service {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    max-width: 70%;
+    gap: 1em;
+}
+
+#popular-service > img {
+    object-fit: cover;
+    width: 50%;
+    max-height: 600px;
+    
+}
+
+#popular-service > div {
+    
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f7f5ff;
+}
+
+#calendar, #calendar-days{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+.day {
+    text-align: center;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+}
+
+.week-day, .empty {
+    
+    aspect-ratio: 1/1;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.week-day > p {
+    margin-left: 16px;
+}
+
+#date-select {
+   text-align: center;
+}

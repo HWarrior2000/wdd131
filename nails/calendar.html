@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mer's Nails | Calendar</title>
+    <link rel="stylesheet" href="nails.css">
+    <script src="calendar.js" defer></script>
+</head>
+<body>
+    <header>
+        <img class="logo" src="mersNailsLogo.png" alt="logo">
+        <ul id="navBlock">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="calendar.html">Calendar</a></li>
+        </ul>
+        <ul id="socialBlock">
+            <li><a href="#"><img width="50" height="50" src="https://img.icons8.com/fluency-systems-filled/50/facebook.png" alt="facebook"/></a></li>
+            <li><a href="#"><img width="50" height="50" src="https://img.icons8.com/fluency-systems-filled/50/instagram-new.png" alt="instagram-new"/></a></li>
+            <li><a href="#"><img width="50" height="50" src="https://img.icons8.com/fluency-systems-filled/50/tiktok.png" alt="tiktok"/></a></li>
+            <li><a href="#"><img width="50" height="50" src="https://img.icons8.com/fluency-systems-filled/50/twitterx.png" alt="twitterx"/></a></li>
+        </ul>
+    </header>
+    <main>
+        <form id="date-select" action="" method="get">
+            <label for="month"></label>
+            <select name="month" id="month" required>
+                <!-- <option value="0">January</option>
+                <option value="1">Febuary</option>
+                <option value="2">March</option>
+                <option value="3">April</option>
+                <option value="4">May</option>
+                <option value="5">June</option>
+                <option value="6">July</option>
+                <option value="7">August</option>
+                <option value="8">September</option>
+                <option value="9">October</option>
+                <option value="10">November</option>
+                <option value="11">December</option> -->
+            </select>
+            <label for="year"></label>
+            <select name="year" id="year">
+                <!-- <option value="2025">2025</option>
+                <option value="2026">2026</option> -->
+            </select>
+            <button type="submit" id="submit">Submit</button>
+        </form>
+        <div id="calendar-days">
+            <p class="day">Sunday</p>
+            <p class="day">Monday</p>
+            <p class="day">Tuesday</p>
+            <p class="day">Wednesday</p>
+            <p class="day">Thursday</p>
+            <p class="day">Friday</p>
+            <p class="day">Saturday</p>
+        </div>
+        <div id="calendar"></div>
+    </main>
+    <footer>
+        <img class="logo" src="mersNailsLogo.png" alt="logo">
+        <address>Visit us at: 118 W Main Street Rigby, ID 83442</address>
+        <address>Call us at: 724-288-2193</address>
+    </footer>
+</body>
+</html>
