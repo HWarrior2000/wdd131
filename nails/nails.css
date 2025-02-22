@@ -164,7 +164,7 @@ footer {
 #calendar, #calendar-days{
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    max-width: 70%;
+    max-width:70%;
     margin: 0 auto;
 }
 
@@ -229,4 +229,29 @@ footer {
     padding: 0;
     position: absolute;
     width: 1px;
+  }
+
+  @media (max-width: 600px) {
+    #reviews {
+        flex-direction: column;
+    }
+
+    #popular-service {
+        flex-wrap: wrap;
+    }
+
+    #socialBlock {
+        flex-wrap: wrap;
+        min-width: 100px;
+    }
+
+    #book-now {
+        display: flex;
+        flex-direction: column;
+        max-height: 100%;
+    }
+
+    #book-now > h2 {
+        max-width: 100%;
+    }
   }
