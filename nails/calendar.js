@@ -1,3 +1,7 @@
+function buildCalendarHTML(accumulator, element) {
+    return accumulator + element;
+}
+
 function generateCalendar(year, month) {
     const totalDays = new Date(year, month + 1, 0).getDate();
     const startDay = new Date(year, month, 1).getDay();
@@ -18,9 +22,7 @@ function generateCalendar(year, month) {
         calendar.push(`<div class="empty"></div>`);
     }
 
-    calendar.forEach(element => {
-        calendarArea.insertAdjacentHTML("beforeend", element);
-    });
+    calendarArea.innerHTML = calendar.reduce(buildCalendarHTML, "");
 }
 
 function setMonths(selectedYear) {

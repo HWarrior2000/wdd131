@@ -21,38 +21,24 @@
             <li><a href="#"><img width="50" height="50" src="https://img.icons8.com/fluency-systems-filled/50/twitterx.png" alt="twitterx"/></a></li>
         </ul>
     </header>
-    <main>
+    <main id="main-calendar">
         <form id="date-select" action="" method="get">
-            <label for="month"></label>
-            <select name="month" id="month" required>
-                <!-- <option value="0">January</option>
-                <option value="1">Febuary</option>
-                <option value="2">March</option>
-                <option value="3">April</option>
-                <option value="4">May</option>
-                <option value="5">June</option>
-                <option value="6">July</option>
-                <option value="7">August</option>
-                <option value="8">September</option>
-                <option value="9">October</option>
-                <option value="10">November</option>
-                <option value="11">December</option> -->
-            </select>
-            <label for="year"></label>
-            <select name="year" id="year">
-                <!-- <option value="2025">2025</option>
-                <option value="2026">2026</option> -->
-            </select>
+            <!-- <label for="month" class="hidden">Month Selector</label> -->
+            <select name="month" id="month" required></select>
+            <label for="month" class="hidden">Month Selector</label>
+            <!-- <label for="year" class="hidden">Year Selector</label> -->
+            <select name="year" id="year"></select>
+            <label for="year" class="hidden">Year Selector</label>
             <button type="submit" id="submit">Submit</button>
         </form>
         <div id="calendar-days">
-            <p class="day">Sunday</p>
+            <p class="day-start">Sunday</p>
             <p class="day">Monday</p>
             <p class="day">Tuesday</p>
             <p class="day">Wednesday</p>
             <p class="day">Thursday</p>
             <p class="day">Friday</p>
-            <p class="day">Saturday</p>
+            <p class="day-end">Saturday</p>
         </div>
         <div id="calendar"></div>
     </main>

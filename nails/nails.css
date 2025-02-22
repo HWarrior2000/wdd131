@@ -1,9 +1,24 @@
+@import url("https://fonts.googleapis.com/css?family=IM+Fell+French+Canon+SC|Lato");
+
 body {
     margin: 0;
 }
 
-h1, h2, h3 {
+h1, h2 {
     text-align: center;
+    font-family: "IM Fell French Canon SC";
+    font-size: 200%;
+}
+
+h3 {
+    text-align: center;
+    font-family: "IM Fell French Canon SC";
+    font-size: 150%;
+}
+
+p, a , address{
+    font-family: Lato, Helvetica, sans-serif;
+    line-height: 1.5em;
 }
 
 header {
@@ -11,6 +26,7 @@ header {
     grid-template-columns: 100px 1fr 1fr;
     align-items: center;
     background-color: #f7f5ff;
+    padding: 0 7.5%;
 }
 
 header > #navBlock {
@@ -21,6 +37,13 @@ header > #navBlock {
     padding: 0 0 0 2em ;
     margin: 0;
     flex-wrap: wrap;
+}
+
+header > #navBlock > li > a {
+    border-style: double;
+    border-radius: 1em;
+    padding: .25em 1em;
+    border-color: black;
 }
 
 header > #socialBlock {
@@ -52,11 +75,12 @@ header > #socialBlock {
     grid-row: 1 / 4;
     grid-column: 1 / 2; 
 }
-#book-now > p {
+#book-now > h2 {
     grid-row: 2 / 3;
     grid-column: 1 / 2;
     text-align: center;
-    align-self: end;
+    max-width: 50%;
+    margin: 0 auto;
 }
 #book-now > a {
     grid-row: 3 / 4;
@@ -66,25 +90,56 @@ header > #socialBlock {
     margin: 0 auto;
     align-content: center;
     text-align: center;
-    margin-top: -10px;
+    margin-top: 0px;
+    /* border-style: double; */
+    border-radius: 1em;
+    padding: 0 1em;
+    border-color: black;
+    background: rgb(247, 245, 255, .7);
 }
 
 #reviews {
     display: flex;
-    max-width: 90%;
+    max-width: 70%;
     margin: 0 auto;
     gap: 1em;
 }
 
 .review {
     width: 100%;
+    background-color: #f7f5ff;
+    padding: 0 10px;
+    border-radius: 1em;
+    border-style: double;
 }
+
+.reviewer {
+    font-weight: 800;
+    font-size: 1.25em;
+}
+
 .review p {
     text-align: center;
 }
 
+.colored {
+    background-color: #c0d1cb;
+    padding: 1em 0 1em 0;
+}
+.colored > h2 {
+    margin-top: 0;
+}
+
+.colored-pink {
+    background-color: #f7f5ff;
+    padding: 1em 0 1em 0;
+}
+.colored-pink > h2 {
+    margin-top: 0;
+}
+
 #popular-service {
-    margin: 0 auto;
+    margin: 1em auto;
     display: flex;
     justify-content: center;
     max-width: 70%;
@@ -98,15 +153,12 @@ header > #socialBlock {
     
 }
 
-#popular-service > div {
-    
-}
-
 footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #f7f5ff;
+    padding: 0 7.5%;
 }
 
 #calendar, #calendar-days{
@@ -116,10 +168,30 @@ footer {
     margin: 0 auto;
 }
 
+#calendar {
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+}
+
 .day {
     text-align: center;
     border-style: solid;
-    border-width: 1px 1px 1px 1px;
+    border-width: 2px 1px 2px 1px;
+    background-color: #f7f5ff;
+}
+
+.day-start {
+    text-align: center;
+    border-style: solid;
+    border-width: 2px 1px 2px 2px;
+    background-color: #f7f5ff;
+}
+
+.day-end {
+    text-align: center;
+    border-style: solid;
+    border-width: 2px 2px 2px 1px;
+    background-color: #f7f5ff;
 }
 
 .week-day, .empty {
@@ -127,6 +199,7 @@ footer {
     aspect-ratio: 1/1;
     border-style: solid;
     border-width: 1px;
+    background-color: #f7f5ff;
 }
 
 .week-day > p {
@@ -136,3 +209,24 @@ footer {
 #date-select {
    text-align: center;
 }
+
+#main-calendar {
+    padding: 1em 0;
+    background-color: #c0d1cb;
+}
+
+#month, #year, #submit { 
+    background-color: #f7f5ff;
+}
+
+/* i looked this up on stack overflow so that i could hide the lables in a way that would still be readable to screen readers */
+.hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
