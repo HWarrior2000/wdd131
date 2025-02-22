@@ -22,15 +22,23 @@ function generateCalendar(year, month) {
         calendarArea.insertAdjacentHTML("beforeend", element);
     });
 }
-function setMonths(startMonth) {
+
+function setMonths(selectedYear) {
     const inputArea = document.querySelector("#month");
-    console.log(inputArea);
+    
     const months = ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     let input = "";
+    inputArea.innerHTML = input;
     let indexCounter = 0;
     months.forEach(element => {
-        if (indexCounter >= startMonth) {
+        if (thisYear === selectedYear) {
+            if (indexCounter >= thisMonth) {
+                input += `<option value="${indexCounter}">${element}</option>`;
+            }
+        }
+        else {
             input += `<option value="${indexCounter}">${element}</option>`;
+
         }
         indexCounter ++;
     });
@@ -46,7 +54,7 @@ function setYears(startYear) {
 
 const thisMonth = new Date().getMonth();
 const thisYear = new Date().getFullYear();
-setMonths(thisMonth);
+setMonths(thisYear);
 console.log(thisMonth);
 setYears(thisYear);
 console.log(thisYear);
@@ -64,4 +72,9 @@ document.querySelector("#date-select").addEventListener("submit", function(event
 
     // render the calendar
     generateCalendar(userYear, userMonth);
+});
+
+document.querySelector("#year").addEventListener("change", function(event) {
+    const selectedYear = parseInt(event.target.value);
+    setMonths(selectedYear);
 });
